@@ -1,3 +1,3 @@
 ### Site de vidéo à la demande
 
-<a href="./update.html">Uploader une vidéo</a> 
+<a href="./update.md">Uploader une vidéo</a> 
