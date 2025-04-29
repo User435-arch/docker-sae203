@@ -1,6 +1,6 @@
 @font-face {
   font-family: myFirstFont;
-  src: url('C:/Users/ab762/Downloads/sansation/Sansation_Light.ttf');
+  src: url('C:/Users/ab762/Downloads/sansation/Sansation_Light.ttf') format('ttf');
 }
 
 #heading {
