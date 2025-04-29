@@ -1,12 +1,12 @@
 @font-face {
-  font-family: myFirstFont;
+  font-family: helvetica;
   src: url(./fonts/helvetica/Helvetica.ttf) format('ttf');
   font-style: normal;
   font-weight: 100;
 }
 
 #heading {
-	font-family: 'myFirstFont';
+	font-family: 'helvetica';
 	font-weight: 100;
 	color: #36ff33;
 }
