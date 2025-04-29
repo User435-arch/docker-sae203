@@ -1,0 +1,9 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(C:/Users/ab762/Downloads/sansation/Sansation_Light.ttf);
+}
+
+h1 {
+	font-family: 'myFirstFont';
+	color: #36FF33;
+}
