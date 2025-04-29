@@ -1,9 +1,12 @@
 @font-face {
   font-family: myFirstFont;
-  src: url('C:/Users/ab762/Downloads/sansation/Sansation_Light.ttf') format('ttf');
+  src: url(C:/Users/ab762/Downloads/sansation/Sansation_Light.ttf) format('ttf');
+  font-style: normal;
+  font-weight: 100;
 }
 
 #heading {
 	font-family: 'myFirstFont';
+	font-weight: 100;
 	color: #36ff33;
 }
