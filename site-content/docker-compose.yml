@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+    nginx:
+      image: nginx:latest
+      container_name: nginx-container
+      ports:
+       - 3000:80

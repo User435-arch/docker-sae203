@@ -1,0 +1,260 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: snow;
+    margin: 0;
+    padding: 0;
+}
+
+/* Thème sombre */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Barre de navigation */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px 20px;
+    color: snow;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navbar.dark-theme {
+    background-color: #1e1e1e;
+}
+
+.navbar a {
+    color: snow;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: snow;
+}
+
+/* Style pour l'image du logo */
+.logo-image {
+	height: 30px; /* Réduit la hauteur à 50px pour une petite taille */
+    width: auto; /* Conserve les proportions de l'image */
+    display: block;
+}
+
+/* Style pour l'engrenage */
+.settings {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.settings-icon {
+    width: 25px; /* Taille de l'engrenage */
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.settings-icon:hover {
+    transform: rotate(90deg); /* Effet de rotation au survol */
+}
+
+/* Style pour le menu déroulant */
+.dropdown-menu {
+    display: none; /* Masqué par défaut */
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px;
+}
+
+.dropdown-menu button {
+    background: none;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+}
+
+.dropdown-menu button:hover {
+    background-color: #f1f1f1;
+}
+
+.upload-button {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+/* Conteneur principal */
+#video-container {
+    margin-top: 80px; /* Pour éviter que la vidéo soit masquée par la navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Conteneur de la vidéo */
+#video-wrapper {
+    flex: 1; /* La vidéo occupe tout l'espace disponible à gauche */
+    max-width: 60%; /* Limite la largeur de la vidéo */
+}
+
+video {
+    width: 100%; /* La vidéo prend toute la largeur de son conteneur */
+    border: 3px solid #444;
+    border-radius: 8px;
+}
+
+/* Conteneur des informations */
+#info-wrapper {
+    flex: 0 0 35%; /* Les informations occupent 35% de l'espace */
+    text-align: left;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour un effet visuel */
+}
+
+#info-wrapper.dark-theme {
+    background-color: rgba(50, 50, 50, 0.8);
+    color: #ffffff;
+}
+
+#video-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#view-counter {
+    font-size: 16px;
+    color: #555;
+}
+
+#top {
+    padding-top: 80px;
+    text-align: center;
+}
+
+/* Section des vidéos aléatoires */
+#random-videos {
+    margin: 40px 20px;
+    text-align: center;
+}
+
+#random-videos h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.random-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colonnes */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.random-video-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.random-video-item.dark-theme {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.random-video-item:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+.random-video-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.random-video-item p {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+/* Boutons de like et dislike */
+#like-dislike-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.like-button, .dislike-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.like-button {
+    background-color: #4CAF50; /* Vert */
+    color: white;
+}
+
+.like-button:hover {
+    background-color: #45a049;
+}
+
+.dislike-button {
+    background-color: #f44336; /* Rouge */
+    color: white;
+}
+
+.dislike-button:hover {
+    background-color: #e53935;
+}
+
+.like-button:disabled, .dislike-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

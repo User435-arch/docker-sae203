@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Uploader une vidéo</title>
+		<script src="theme.js" defer></script>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" href="logo.png" type="image/png"> <!-- Icône de l'onglet -->
+		<script src="dropdown.js" defer></script>
+		<link href="style.css" rel="stylesheet"></link>
+	</head>
+<body>
+<div class="bg"> <!-- -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="#top">
+				<a href="index.php">
+					<img src="logo.png" alt="Logo" class="logo-image"> <!-- Remplacement par l'image -->
+				</a>
+            </a>
+        </div>
+        <div class="settings">
+            <img src="gear-icon.png" alt="Settings" class="settings-icon" id="settings-icon">
+            <div class="dropdown-menu" id="dropdown-menu">
+                <button id="theme-toggle">Changer de thème</button>
+            </div>
+        </div>
+		<a href="update.html" class="upload-button">Upload</a>
+    </div>
+
+	<div id="top">
+		<h1 id="heading">Uploader une vidéo</h1>
+		<br/>
+		<br/>
+
+		<form action="upload.php" method="post" enctype="multipart/form-data">
+			<label for="file" id="file-label">Choisir vidéo</label>
+			<input type="file" accept="video/*" id="file" accept="video/*" required />
+			<p id="fileName"></p>
+
+		<div class="miniature">
+			<label for="file2" id="file-label2">Choisir miniature</label>
+			<input type="file" accept="image/*" id="file2" onchange="readURL(this)" required />
+			<img src="" alt="Pas d'image" id="img" style='height:150px;'>
+		</div>
+
+		<br/>
+		<br/>
+
+		<div class="formfield1">
+			<label for="textarea1" id=lbltext1">Titre video :</label>
+			<textarea id="textarea1" rows="4" cols="50">
+			</textarea>
+		</div>
+		<br/>
+		<br/>
+
+		<div class="formfield2">
+			<label for="textarea2" id=lbltext2>Description video :</label>
+			<textarea id="textarea2" rows="4" cols="50">
+			</textarea>
+		</div>
+		</form>
+		
+		<br/>
+		<br/>
+
+		<input type="submit" id="submit" value="Valider" />
+
+		<<!--<script src="script.js"></script>-->
+		<script src="./readURL.js"></script>
+		<script src="./Choix_fichier.js"></script>
+		<script src="./limite_upload.js"></script>
+
+		</div>
+	</div>
+</div> <!-- -->
+</body>
+</html>
